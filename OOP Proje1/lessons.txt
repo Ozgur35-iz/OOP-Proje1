@@ -1,0 +1,4 @@
+﻿1;Yoga;EsneklikZihin;Ayşe Hoca;Stüdyo A;Tuesday;18:00;20
+2;Pilates;EsneklikZihin;Selin Hoca;Stüdyo B;Thursday;17:30;20
+3;Crossfit;GucKondisyon;Ali Hoca;Stüdyo C;Wednesday;19:00;15
+

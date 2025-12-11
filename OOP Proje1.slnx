@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="GymSystem/GymSystem.csproj" Id="fd29fda0-1618-4c0d-9cfb-1154713cdad1" />
+  <Project Path="OOP Proje1/OOP Proje1.csproj" />
+  <Project Path="WinFormsAppFront/WinFormsAppFront.csproj" Id="d6e4ff98-27b4-44b8-8f89-bd705cbd3e7c" />
+</Solution>
