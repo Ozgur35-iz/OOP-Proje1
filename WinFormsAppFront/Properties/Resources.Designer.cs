@@ -63,6 +63,16 @@ namespace WinFormsAppFront.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_8c78an8c78an8c78 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_8c78an8c78an8c78", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Gemini_Generated_Image_bmuuvbmuuvbmuuvb {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_bmuuvbmuuvbmuuvb", resourceCulture);

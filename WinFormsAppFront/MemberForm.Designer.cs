@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MemberForm));
             lblWelcome = new Label();
             lblPackage = new Label();
             lblEndDate = new Label();
             lstMyLessons = new ListBox();
             btnCatalog = new Button();
             btnLogout = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblWelcome
@@ -52,7 +55,7 @@
             // lblPackage
             // 
             lblPackage.AutoSize = true;
-            lblPackage.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblPackage.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Italic, GraphicsUnit.Point, 162);
             lblPackage.ForeColor = Color.RoyalBlue;
             lblPackage.Location = new Point(217, 107);
             lblPackage.Margin = new Padding(4, 0, 4, 0);
@@ -65,7 +68,7 @@
             // lblEndDate
             // 
             lblEndDate.AutoSize = true;
-            lblEndDate.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblEndDate.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Italic, GraphicsUnit.Point, 162);
             lblEndDate.ForeColor = Color.RoyalBlue;
             lblEndDate.Location = new Point(564, 107);
             lblEndDate.Margin = new Padding(4, 0, 4, 0);
@@ -114,6 +117,16 @@
             btnLogout.Text = "Log Out";
             btnLogout.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(875, 34);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(106, 99);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            // 
             // MemberForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -121,6 +134,7 @@
             BackColor = Color.White;
             BackgroundImage = Properties.Resources.indir__3_1;
             ClientSize = new Size(1028, 750);
+            Controls.Add(pictureBox1);
             Controls.Add(btnLogout);
             Controls.Add(btnCatalog);
             Controls.Add(lstMyLessons);
@@ -133,6 +147,7 @@
             Name = "MemberForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Üye Paneli";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -145,5 +160,6 @@
         private ListBox lstMyLessons;
         private Button btnCatalog;
         private Button btnLogout;
+        private PictureBox pictureBox1;
     }
 }

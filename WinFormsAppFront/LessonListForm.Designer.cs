@@ -17,18 +17,22 @@ namespace WinFormsAppFront
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LessonListForm));
             lblCategoryTitle = new Label();
             lstLessons = new ListBox();
             btnDetay = new Button();
             btnGeri = new Button();
             lblInfo = new Label();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblCategoryTitle
             // 
             lblCategoryTitle.AutoSize = true;
             lblCategoryTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            lblCategoryTitle.Location = new Point(29, 33);
+            lblCategoryTitle.ForeColor = Color.RoyalBlue;
+            lblCategoryTitle.Location = new Point(403, 31);
             lblCategoryTitle.Margin = new Padding(4, 0, 4, 0);
             lblCategoryTitle.Name = "lblCategoryTitle";
             lblCategoryTitle.Size = new Size(223, 38);
@@ -39,51 +43,70 @@ namespace WinFormsAppFront
             // 
             lstLessons.Font = new Font("Segoe UI", 11F);
             lstLessons.FormattingEnabled = true;
-            lstLessons.Location = new Point(29, 133);
+            lstLessons.Location = new Point(192, 127);
             lstLessons.Margin = new Padding(4, 5, 4, 5);
             lstLessons.Name = "lstLessons";
-            lstLessons.Size = new Size(627, 394);
+            lstLessons.Size = new Size(648, 334);
             lstLessons.TabIndex = 2;
             lstLessons.DoubleClick += lstLessons_DoubleClick;
             // 
             // btnDetay
             // 
-            btnDetay.Location = new Point(400, 567);
+            btnDetay.BackColor = Color.RoyalBlue;
+            btnDetay.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            btnDetay.ForeColor = Color.White;
+            btnDetay.Location = new Point(366, 540);
             btnDetay.Margin = new Padding(4, 5, 4, 5);
             btnDetay.Name = "btnDetay";
-            btnDetay.Size = new Size(257, 58);
+            btnDetay.Size = new Size(284, 73);
             btnDetay.TabIndex = 3;
-            btnDetay.Text = "📋 Ders Detayı";
-            btnDetay.UseVisualStyleBackColor = true;
+            btnDetay.Text = "Course Details";
+            btnDetay.UseVisualStyleBackColor = false;
             btnDetay.Click += btnDetay_Click;
             // 
             // btnGeri
             // 
-            btnGeri.Location = new Point(29, 567);
+            btnGeri.BackColor = Color.White;
+            btnGeri.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnGeri.ForeColor = Color.RoyalBlue;
+            btnGeri.Location = new Point(418, 657);
             btnGeri.Margin = new Padding(4, 5, 4, 5);
             btnGeri.Name = "btnGeri";
-            btnGeri.Size = new Size(143, 58);
+            btnGeri.Size = new Size(183, 38);
             btnGeri.TabIndex = 4;
-            btnGeri.Text = "← Geri";
-            btnGeri.UseVisualStyleBackColor = true;
+            btnGeri.Text = "Go Back";
+            btnGeri.UseVisualStyleBackColor = false;
             btnGeri.Click += btnGeri_Click;
             // 
             // lblInfo
             // 
             lblInfo.AutoSize = true;
-            lblInfo.ForeColor = Color.Gray;
-            lblInfo.Location = new Point(29, 83);
+            lblInfo.ForeColor = Color.FromArgb(128, 128, 255);
+            lblInfo.Location = new Point(353, 82);
             lblInfo.Margin = new Padding(4, 0, 4, 0);
             lblInfo.Name = "lblInfo";
-            lblInfo.Size = new Size(316, 25);
+            lblInfo.Size = new Size(306, 25);
             lblInfo.TabIndex = 1;
-            lblInfo.Text = "Detayları görmek için derse çift tıklayın";
+            lblInfo.Text = "Double-click the course to see details";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(877, 31);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(106, 99);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
             // 
             // LessonListForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1028, 750);
+            Controls.Add(pictureBox1);
             Controls.Add(btnGeri);
             Controls.Add(btnDetay);
             Controls.Add(lstLessons);
@@ -96,6 +119,7 @@ namespace WinFormsAppFront
             StartPosition = FormStartPosition.CenterParent;
             Text = "Ders Listesi";
             Load += LessonListForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -107,5 +131,6 @@ namespace WinFormsAppFront
         private ListBox lstLessons;
         private Button btnDetay;
         private Button btnGeri;
+        private PictureBox pictureBox1;
     }
 }

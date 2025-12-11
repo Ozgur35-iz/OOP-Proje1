@@ -31,10 +31,10 @@ namespace WinFormsAppFront
         {
             string categoryName = _category switch
             {
-                LessonCategory.Kardiyo => "🏃 Kardiyo Dersleri",
-                LessonCategory.GucKondisyon => "💪 Güç & Kondisyon Dersleri",
-                LessonCategory.EsneklikZihin => "🧘 Esneklik & Zihin Dersleri",
-                _ => "Dersler"
+                LessonCategory.Kardiyo => "Cardio Classes",
+                LessonCategory.GucKondisyon => "Strength & Conditioning Classes",
+                LessonCategory.EsneklikZihin => "Flexibility & Mind Classes",
+                _ => "Classes"
             };
             lblCategoryTitle.Text = categoryName;
             this.Text = categoryName;
@@ -48,7 +48,7 @@ namespace WinFormsAppFront
 
             if (lessons.Count == 0)
             {
-                lstLessons.Items.Add("Bu kategoride ders bulunamadı.");
+                lstLessons.Items.Add("No courses available in this category.");
                 return;
             }
 
@@ -64,13 +64,13 @@ namespace WinFormsAppFront
         {
             return day switch
             {
-                DayOfWeek.Monday => "Pazartesi",
-                DayOfWeek.Tuesday => "Salı",
-                DayOfWeek.Wednesday => "Çarşamba",
-                DayOfWeek.Thursday => "Perşembe",
-                DayOfWeek.Friday => "Cuma",
-                DayOfWeek.Saturday => "Cumartesi",
-                DayOfWeek.Sunday => "Pazar",
+                DayOfWeek.Monday => "Monday",
+                DayOfWeek.Tuesday => "Tuesday",
+                DayOfWeek.Wednesday => "Wednesday",
+                DayOfWeek.Thursday => "Thursday",
+                DayOfWeek.Friday => "Friday",
+                DayOfWeek.Saturday => "Saturday",
+                DayOfWeek.Sunday => "Sunday",
                 _ => day.ToString()
             };
         }
@@ -89,7 +89,7 @@ namespace WinFormsAppFront
         {
             if (lstLessons.SelectedIndex < 0)
             {
-                MessageBox.Show("Lütfen bir ders seçin.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please choose a class.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
