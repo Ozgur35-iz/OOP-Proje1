@@ -42,9 +42,10 @@
             // lblWelcome
             // 
             lblWelcome.AutoSize = true;
+            lblWelcome.BackColor = Color.Transparent;
             lblWelcome.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             lblWelcome.ForeColor = Color.RoyalBlue;
-            lblWelcome.Location = new Point(347, 49);
+            lblWelcome.Location = new Point(367, 62);
             lblWelcome.Margin = new Padding(4, 0, 4, 0);
             lblWelcome.Name = "lblWelcome";
             lblWelcome.Size = new Size(257, 38);
@@ -55,9 +56,10 @@
             // lblPackage
             // 
             lblPackage.AutoSize = true;
+            lblPackage.BackColor = Color.Transparent;
             lblPackage.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Italic, GraphicsUnit.Point, 162);
             lblPackage.ForeColor = Color.RoyalBlue;
-            lblPackage.Location = new Point(217, 107);
+            lblPackage.Location = new Point(231, 139);
             lblPackage.Margin = new Padding(4, 0, 4, 0);
             lblPackage.Name = "lblPackage";
             lblPackage.Size = new Size(162, 26);
@@ -70,7 +72,7 @@
             lblEndDate.AutoSize = true;
             lblEndDate.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Italic, GraphicsUnit.Point, 162);
             lblEndDate.ForeColor = Color.RoyalBlue;
-            lblEndDate.Location = new Point(564, 107);
+            lblEndDate.Location = new Point(589, 139);
             lblEndDate.Margin = new Padding(4, 0, 4, 0);
             lblEndDate.Name = "lblEndDate";
             lblEndDate.Size = new Size(155, 26);
