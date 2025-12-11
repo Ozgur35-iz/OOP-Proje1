@@ -1,3 +1,4 @@
+
 namespace WinFormsAppFront
 {
     partial class LessonListForm
@@ -32,7 +33,7 @@ namespace WinFormsAppFront
             lblCategoryTitle.AutoSize = true;
             lblCategoryTitle.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
             lblCategoryTitle.ForeColor = Color.RoyalBlue;
-            lblCategoryTitle.Location = new Point(403, 31);
+            lblCategoryTitle.Location = new Point(192, 31);
             lblCategoryTitle.Margin = new Padding(4, 0, 4, 0);
             lblCategoryTitle.Name = "lblCategoryTitle";
             lblCategoryTitle.Size = new Size(223, 38);
@@ -41,12 +42,13 @@ namespace WinFormsAppFront
             // 
             // lstLessons
             // 
-            lstLessons.Font = new Font("Segoe UI", 11F);
+            lstLessons.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lstLessons.ForeColor = Color.DimGray;
             lstLessons.FormattingEnabled = true;
             lstLessons.Location = new Point(192, 127);
             lstLessons.Margin = new Padding(4, 5, 4, 5);
             lstLessons.Name = "lstLessons";
-            lstLessons.Size = new Size(648, 334);
+            lstLessons.Size = new Size(648, 274);
             lstLessons.TabIndex = 2;
             lstLessons.DoubleClick += lstLessons_DoubleClick;
             // 
@@ -67,9 +69,11 @@ namespace WinFormsAppFront
             // btnGeri
             // 
             btnGeri.BackColor = Color.White;
-            btnGeri.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            btnGeri.FlatAppearance.BorderSize = 0;
+            btnGeri.FlatStyle = FlatStyle.Flat;
+            btnGeri.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             btnGeri.ForeColor = Color.RoyalBlue;
-            btnGeri.Location = new Point(418, 657);
+            btnGeri.Location = new Point(412, 645);
             btnGeri.Margin = new Padding(4, 5, 4, 5);
             btnGeri.Name = "btnGeri";
             btnGeri.Size = new Size(183, 38);
@@ -82,7 +86,7 @@ namespace WinFormsAppFront
             // 
             lblInfo.AutoSize = true;
             lblInfo.ForeColor = Color.FromArgb(128, 128, 255);
-            lblInfo.Location = new Point(353, 82);
+            lblInfo.Location = new Point(192, 84);
             lblInfo.Margin = new Padding(4, 0, 4, 0);
             lblInfo.Name = "lblInfo";
             lblInfo.Size = new Size(306, 25);
@@ -92,7 +96,7 @@ namespace WinFormsAppFront
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(877, 31);
+            pictureBox1.Location = new Point(734, 20);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(106, 99);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -122,6 +126,11 @@ namespace WinFormsAppFront
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void lstLessons_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

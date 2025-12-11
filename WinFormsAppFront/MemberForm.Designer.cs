@@ -79,7 +79,8 @@
             // 
             // lstMyLessons
             // 
-            lstMyLessons.Font = new Font("Segoe UI", 10F);
+            lstMyLessons.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold);
+            lstMyLessons.ForeColor = Color.DimGray;
             lstMyLessons.FormattingEnabled = true;
             lstMyLessons.Location = new Point(260, 203);
             lstMyLessons.Margin = new Padding(4, 5, 4, 5);

@@ -17,6 +17,7 @@ namespace WinFormsAppFront
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LessonCatalogForm));
             lblTitle = new Label();
             btnKardiyo = new Button();
             btnGucKondisyon = new Button();
@@ -31,90 +32,99 @@ namespace WinFormsAppFront
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            lblTitle.Location = new Point(120, 20);
+            lblTitle.Location = new Point(317, 31);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(260, 30);
+            lblTitle.Size = new Size(364, 45);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Grup Dersleri Kataloğu";
             // 
             // btnKardiyo
             // 
             btnKardiyo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnKardiyo.Location = new Point(50, 80);
+            btnKardiyo.Location = new Point(212, 100);
+            btnKardiyo.Margin = new Padding(4, 5, 4, 5);
             btnKardiyo.Name = "btnKardiyo";
-            btnKardiyo.Size = new Size(400, 50);
+            btnKardiyo.Size = new Size(571, 83);
             btnKardiyo.TabIndex = 1;
             btnKardiyo.Text = "🏃 Kardiyo";
             btnKardiyo.UseVisualStyleBackColor = true;
             btnKardiyo.Click += btnKardiyo_Click;
             // 
-            // lblKardiyoDesc
-            // 
-            lblKardiyoDesc.AutoSize = true;
-            lblKardiyoDesc.ForeColor = Color.Gray;
-            lblKardiyoDesc.Location = new Point(50, 133);
-            lblKardiyoDesc.Name = "lblKardiyoDesc";
-            lblKardiyoDesc.Size = new Size(200, 15);
-            lblKardiyoDesc.TabIndex = 2;
-            lblKardiyoDesc.Text = "Spinning, Zumba, Aerobik...";
-            // 
             // btnGucKondisyon
             // 
             btnGucKondisyon.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnGucKondisyon.Location = new Point(50, 170);
+            btnGucKondisyon.Location = new Point(212, 254);
+            btnGucKondisyon.Margin = new Padding(4, 5, 4, 5);
             btnGucKondisyon.Name = "btnGucKondisyon";
-            btnGucKondisyon.Size = new Size(400, 50);
+            btnGucKondisyon.Size = new Size(571, 83);
             btnGucKondisyon.TabIndex = 3;
             btnGucKondisyon.Text = "💪 Güç && Kondisyon";
             btnGucKondisyon.UseVisualStyleBackColor = true;
             btnGucKondisyon.Click += btnGucKondisyon_Click;
             // 
-            // lblGucDesc
-            // 
-            lblGucDesc.AutoSize = true;
-            lblGucDesc.ForeColor = Color.Gray;
-            lblGucDesc.Location = new Point(50, 223);
-            lblGucDesc.Name = "lblGucDesc";
-            lblGucDesc.Size = new Size(200, 15);
-            lblGucDesc.TabIndex = 4;
-            lblGucDesc.Text = "Crossfit, Body Pump, Fonksiyonel...";
-            // 
             // btnEsneklikZihin
             // 
             btnEsneklikZihin.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnEsneklikZihin.Location = new Point(50, 260);
+            btnEsneklikZihin.Location = new Point(212, 422);
+            btnEsneklikZihin.Margin = new Padding(4, 5, 4, 5);
             btnEsneklikZihin.Name = "btnEsneklikZihin";
-            btnEsneklikZihin.Size = new Size(400, 50);
+            btnEsneklikZihin.Size = new Size(571, 83);
             btnEsneklikZihin.TabIndex = 5;
-            btnEsneklikZihin.Text = "🧘 Esneklik && Zihin";
+            btnEsneklikZihin.Text = "\U0001f9d8 Esneklik && Zihin";
             btnEsneklikZihin.UseVisualStyleBackColor = true;
             btnEsneklikZihin.Click += btnEsneklikZihin_Click;
             // 
-            // lblEsneklikDesc
-            // 
-            lblEsneklikDesc.AutoSize = true;
-            lblEsneklikDesc.ForeColor = Color.Gray;
-            lblEsneklikDesc.Location = new Point(50, 313);
-            lblEsneklikDesc.Name = "lblEsneklikDesc";
-            lblEsneklikDesc.Size = new Size(200, 15);
-            lblEsneklikDesc.TabIndex = 6;
-            lblEsneklikDesc.Text = "Yoga, Pilates, Meditasyon...";
-            // 
             // btnGeri
             // 
-            btnGeri.Location = new Point(50, 360);
+            btnGeri.Location = new Point(421, 600);
+            btnGeri.Margin = new Padding(4, 5, 4, 5);
             btnGeri.Name = "btnGeri";
-            btnGeri.Size = new Size(100, 30);
+            btnGeri.Size = new Size(143, 50);
             btnGeri.TabIndex = 7;
             btnGeri.Text = "← Geri";
             btnGeri.UseVisualStyleBackColor = true;
             btnGeri.Click += btnGeri_Click;
             // 
+            // lblKardiyoDesc
+            // 
+            lblKardiyoDesc.AutoSize = true;
+            lblKardiyoDesc.ForeColor = Color.Gray;
+            lblKardiyoDesc.Location = new Point(375, 200);
+            lblKardiyoDesc.Margin = new Padding(4, 0, 4, 0);
+            lblKardiyoDesc.Name = "lblKardiyoDesc";
+            lblKardiyoDesc.Size = new Size(230, 25);
+            lblKardiyoDesc.TabIndex = 2;
+            lblKardiyoDesc.Text = "Spinning, Zumba, Aerobik...";
+            // 
+            // lblGucDesc
+            // 
+            lblGucDesc.AutoSize = true;
+            lblGucDesc.ForeColor = Color.Gray;
+            lblGucDesc.Location = new Point(353, 365);
+            lblGucDesc.Margin = new Padding(4, 0, 4, 0);
+            lblGucDesc.Name = "lblGucDesc";
+            lblGucDesc.Size = new Size(289, 25);
+            lblGucDesc.TabIndex = 4;
+            lblGucDesc.Text = "Crossfit, Body Pump, Fonksiyonel...";
+            // 
+            // lblEsneklikDesc
+            // 
+            lblEsneklikDesc.AutoSize = true;
+            lblEsneklikDesc.ForeColor = Color.Gray;
+            lblEsneklikDesc.Location = new Point(381, 540);
+            lblEsneklikDesc.Margin = new Padding(4, 0, 4, 0);
+            lblEsneklikDesc.Name = "lblEsneklikDesc";
+            lblEsneklikDesc.Size = new Size(224, 25);
+            lblEsneklikDesc.TabIndex = 6;
+            lblEsneklikDesc.Text = "Yoga, Pilates, Meditasyon...";
+            // 
             // LessonCatalogForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(500, 420);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1028, 750);
             Controls.Add(btnGeri);
             Controls.Add(lblEsneklikDesc);
             Controls.Add(btnEsneklikZihin);
@@ -124,6 +134,7 @@ namespace WinFormsAppFront
             Controls.Add(btnKardiyo);
             Controls.Add(lblTitle);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
             Name = "LessonCatalogForm";
             StartPosition = FormStartPosition.CenterParent;
