@@ -36,9 +36,24 @@ namespace WinFormsAppFront
                 LessonCategory.EsneklikZihin => "Flexibility & Mind Classes",
                 _ => "Classes"
             };
+
             lblCategoryTitle.Text = categoryName;
             this.Text = categoryName;
+
+            // -------------------------------
+            // Arka plan resmini kategoriye göre ayarla (Resources üzerinden)
+            this.BackgroundImage = _category switch
+            {
+                LessonCategory.Kardiyo => Properties.Resources.Gemini_Generated_Image_e0rlf2e0rlf2e0rl,
+                LessonCategory.GucKondisyon => Properties.Resources.Gemini_Generated_Image_4bgp3z4bgp3z4bgp,
+                LessonCategory.EsneklikZihin => Properties.Resources.Gemini_Generated_Image_snkoe5snkoe5snko,
+                _ => null
+            };
+
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
+
+
 
         private void LoadLessons()
         {

@@ -63,6 +63,46 @@ namespace WinFormsAppFront.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_2b4pgw2b4pgw2b4p {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_2b4pgw2b4pgw2b4p", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_45gxga45gxga45gx {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_45gxga45gxga45gx", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_4bgp3z4bgp3z4bgp {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_4bgp3z4bgp3z4bgp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_57gokt57gokt57go {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_57gokt57gokt57go", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Gemini_Generated_Image_8c78an8c78an8c78 {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_8c78an8c78an8c78", resourceCulture);
@@ -76,6 +116,56 @@ namespace WinFormsAppFront.Properties {
         internal static System.Drawing.Bitmap Gemini_Generated_Image_bmuuvbmuuvbmuuvb {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_bmuuvbmuuvbmuuvb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_d75pb3d75pb3d75p {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_d75pb3d75pb3d75p", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_e0rlf2e0rlf2e0rl {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_e0rlf2e0rlf2e0rl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_gws7ungws7ungws7 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_gws7ungws7ungws7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_sfl7dssfl7dssfl7 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_sfl7dssfl7dssfl7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_snkoe5snkoe5snko {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_snkoe5snkoe5snko", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
