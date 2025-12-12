@@ -68,7 +68,7 @@ namespace WinFormsAppFront
             // 
             // btnGeri
             // 
-            btnGeri.BackColor = Color.White;
+            btnGeri.BackColor = Color.Transparent;
             btnGeri.FlatAppearance.BorderSize = 0;
             btnGeri.FlatStyle = FlatStyle.Flat;
             btnGeri.Font = new Font("Segoe UI", 10F, FontStyle.Bold);

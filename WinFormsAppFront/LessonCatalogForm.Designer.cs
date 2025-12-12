@@ -85,13 +85,18 @@ namespace WinFormsAppFront
             // 
             // btnGeri
             // 
-            btnGeri.Location = new Point(421, 600);
+            btnGeri.BackColor = Color.Transparent;
+            btnGeri.FlatAppearance.BorderSize = 0;
+            btnGeri.FlatStyle = FlatStyle.Flat;
+            btnGeri.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnGeri.ForeColor = Color.RoyalBlue;
+            btnGeri.Location = new Point(425, 624);
             btnGeri.Margin = new Padding(4, 5, 4, 5);
             btnGeri.Name = "btnGeri";
             btnGeri.Size = new Size(143, 50);
             btnGeri.TabIndex = 7;
-            btnGeri.Text = "← Geri";
-            btnGeri.UseVisualStyleBackColor = true;
+            btnGeri.Text = "Go Back";
+            btnGeri.UseVisualStyleBackColor = false;
             btnGeri.Click += btnGeri_Click;
             // 
             // lblKardiyoDesc

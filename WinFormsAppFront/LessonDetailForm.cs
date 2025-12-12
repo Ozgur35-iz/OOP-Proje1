@@ -28,10 +28,10 @@ namespace WinFormsAppFront
 
         private void LoadLessonDetails()
         {
-            this.Text = $"Ders Detayı - {_lesson.Ad}";
+            this.Text = $"Class Detail - {_lesson.Ad}";
             lblLessonName.Text = _lesson.Ad;
-            lblEgitmen.Text = $"👨‍🏫 Eğitmen: {_lesson.Egitmen}";
-            lblSalon.Text = $"🏢 Salon: {_lesson.Salon}";
+            lblEgitmen.Text = $"👨‍🏫 Trainer: {_lesson.Egitmen}";
+            lblSalon.Text = $"🏢 Studio: {_lesson.Salon}";
 
             string gunTurkce = GetTurkishDayName(_lesson.Gun);
             lblGunSaat.Text = $"📅 {gunTurkce} - {_lesson.Saat:hh\\:mm}";
@@ -42,16 +42,16 @@ namespace WinFormsAppFront
 
         private void UpdateKontenjanInfo()
         {
-            lblKontenjan.Text = $"👥 Kontenjan: {_lesson.KontenjanDolu} / {_lesson.KontenjanToplam}";
+            lblKontenjan.Text = $"👥 Quota: {_lesson.KontenjanDolu} / {_lesson.KontenjanToplam}";
 
             if (_lesson.BosYerVar)
             {
-                lblDurum.Text = "✅ Boş yer var!";
+                lblDurum.Text = "✅ There is an available place!";
                 lblDurum.ForeColor = Color.Green;
             }
             else
             {
-                lblDurum.Text = "❌ Kontenjan dolu!";
+                lblDurum.Text = "❌ The course is full!";
                 lblDurum.ForeColor = Color.Red;
             }
         }
@@ -62,20 +62,21 @@ namespace WinFormsAppFront
 
             if (zatenKayitli)
             {
-                btnKayitOl.Enabled = false;
-                btnKayitOl.Text = "✓ Zaten Kayıtlısınız";
-                lblDurum.Text = "✓ Bu derse kayıtlısınız";
-                lblDurum.ForeColor = Color.Blue;
+                //btnKayitOl.Enabled = false;
+                btnKayitOl.Text = "✓ You are already registered!";
+                lblDurum.Text = "✓ You are enrolled in this course!";
+                lblDurum.ForeColor = Color.White;
+                btnKayitOl.ForeColor = Color.White;
             }
             else if (!_lesson.BosYerVar)
             {
                 btnKayitOl.Enabled = false;
-                btnKayitOl.Text = "Kontenjan Dolu";
+                btnKayitOl.Text = "The course is full";
             }
             else
             {
                 btnKayitOl.Enabled = true;
-                btnKayitOl.Text = "📝 Derse Kaydol";
+                btnKayitOl.Text = "📝 Enroll in the course";
             }
         }
 
@@ -98,14 +99,14 @@ namespace WinFormsAppFront
         {
             if (_member.DerseKayitliMi(_lesson))
             {
-                MessageBox.Show("Bu derse zaten kayıtlısınız!", "Bilgi",
+                MessageBox.Show("You are already registered to this lesson!", "Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             if (!_lesson.BosYerVar)
             {
-                MessageBox.Show("Üzgünüz, kontenjan dolu!", "Hata",
+                MessageBox.Show("Sorry, the course is full!", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -118,11 +119,11 @@ namespace WinFormsAppFront
                 SaveRegistrationToFile();
 
                 MessageBox.Show(
-                    $"'{_lesson.Ad}' dersine başarıyla kaydoldunuz!\n\n" +
-                    $"Gün: {GetTurkishDayName(_lesson.Gun)}\n" +
-                    $"Saat: {_lesson.Saat:hh\\:mm}\n" +
-                    $"Salon: {_lesson.Salon}",
-                    "Kayıt Başarılı",
+                    $"You have successfully enrolled in the '{_lesson.Ad}' course.\n\n" +
+                    $"Day: {GetTurkishDayName(_lesson.Gun)}\n" +
+                    $"Time: {_lesson.Saat:hh\\:mm}\n" +
+                    $"Studio: {_lesson.Salon}",
+                    "Enrollment successful",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
@@ -131,7 +132,7 @@ namespace WinFormsAppFront
             }
             else
             {
-                MessageBox.Show("Kayıt yapılamadı. Lütfen tekrar deneyin.", "Hata",
+                MessageBox.Show("Enrollment failed, please try again.", "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -151,7 +152,7 @@ namespace WinFormsAppFront
             catch (Exception ex)
             {
                 // Dosyaya yazma hatası olursa sessizce devam et
-                System.Diagnostics.Debug.WriteLine($"Kayıt dosyaya yazılamadı: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"Failed to write to the file: {ex.Message}");
             }
         }
 
