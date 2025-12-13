@@ -24,17 +24,17 @@ namespace WinFormsAppFront
 
         private void btnKardiyo_Click(object sender, EventArgs e)
         {
-            OpenLessonList(LessonCategory.Kardiyo);
+            OpenLessonList(LessonCategory.Cardio);
         }
 
         private void btnGucKondisyon_Click(object sender, EventArgs e)
         {
-            OpenLessonList(LessonCategory.GucKondisyon);
+            OpenLessonList(LessonCategory.StrengthConditioning);
         }
 
         private void btnEsneklikZihin_Click(object sender, EventArgs e)
         {
-            OpenLessonList(LessonCategory.EsneklikZihin);
+            OpenLessonList(LessonCategory.FlexibilityMind);
         }
 
         private void OpenLessonList(LessonCategory category)

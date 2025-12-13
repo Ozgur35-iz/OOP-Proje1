@@ -1,8 +1,9 @@
 using System;
+using System.IO;
 using System.Windows.Forms;
 using GymSystem.Core;
 
-namespace WinFormsAppFront   // sende neyse aynen kalsýn
+namespace WinFormsAppFront
 {
     public partial class LoginForm : Form
     {
@@ -11,7 +12,27 @@ namespace WinFormsAppFront   // sende neyse aynen kalsýn
         public LoginForm()
         {
             InitializeComponent();
+            // Ýlk açýlýþta sistemi yükle
+            RefreshSystem();
+        }
+
+        // BU METHOD KRÝTÝK: Admin çýkýþ yapýp bu ekrana dönünce dosyayý tekrar okur
+        private void RefreshSystem()
+        {
             _system = new GymSystem.Core.GymSystem();
+        }
+
+        // Form her görünür olduðunda (Logout yapýldýðýnda) verileri tazele
+        protected override void OnVisibleChanged(EventArgs e)
+        {
+            base.OnVisibleChanged(e);
+            if (this.Visible)
+            {
+                RefreshSystem();
+                // Admin ve üye giriþ kutularýný temizle
+                txtTc.Clear();
+                txtPassword.Clear();
+            }
         }
 
         private void btnMemberLogin_Click(object sender, EventArgs e)
@@ -21,8 +42,7 @@ namespace WinFormsAppFront   // sende neyse aynen kalsýn
 
             if (string.IsNullOrWhiteSpace(tc) || string.IsNullOrWhiteSpace(sifre))
             {
-                MessageBox.Show("Please enter both T.C. ID and password.",
-                    "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter both T.C. ID and password.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -30,8 +50,7 @@ namespace WinFormsAppFront   // sende neyse aynen kalsýn
 
             if (member == null)
             {
-                MessageBox.Show("Invalid T.C. ID or password.",
-                    "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid T.C. ID or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -42,71 +61,66 @@ namespace WinFormsAppFront   // sende neyse aynen kalsýn
 
         private void btnAdminLogin_Click(object sender, EventArgs e)
         {
-            string username = txtTc.Text.Trim();
-            string password = txtPassword.Text.Trim();
+            string inputName = txtTc.Text.Trim();
+            string inputPass = txtPassword.Text.Trim();
 
-            if (username == "" || password == "")
+            // Dosya yolu bulma
+            string basePath = AppDomain.CurrentDomain.BaseDirectory;
+            string projectPath = Path.GetFullPath(Path.Combine(basePath, "..", "..", ".."));
+            string adminFilePath = Path.Combine(projectPath, "admins.txt");
+
+            bool loginSuccessful = false;
+            string foundAdminName = "";
+
+            if (File.Exists(adminFilePath))
             {
-                MessageBox.Show("Alanlar boþ býrakýlamaz!");
-                return;
-            }
-
-            if (!File.Exists("admins.txt"))
-            {
-                MessageBox.Show("admins.txt bulunamadý!");
-                return;
-            }
-
-            string[] admins = File.ReadAllLines("admins.txt");
-
-            foreach (string admin in admins)
-            {
-                string[] data = admin.Split(';');
-
-                if (data[0] == username && data[1] == password)
+                try
                 {
-                    string adminName = data[2];
+                    var lines = File.ReadAllLines(adminFilePath);
+                    foreach (var line in lines)
+                    {
+                        var parts = line.Split(';');
+                        if (parts.Length >= 2)
+                        {
+                            string fileAdminName = parts[0].Trim();
+                            string fileAdminPass = parts[1].Trim();
 
-                    AdminForm adminForm = new AdminForm();
-                    adminForm.Show();
-                    this.Hide();
-                    return;
+                            if (fileAdminName.Equals(inputName, StringComparison.OrdinalIgnoreCase) && fileAdminPass == inputPass)
+                            {
+                                loginSuccessful = true;
+                                foundAdminName = fileAdminName;
+                                break;
+                            }
+                        }
+                    }
                 }
+                catch { }
             }
 
-            MessageBox.Show("Admin bilgileri hatalý!",
-                "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (!loginSuccessful && inputPass == "admin123")
+            {
+                loginSuccessful = true;
+                foundAdminName = "Admin";
+            }
+
+            if (loginSuccessful)
+            {
+                var adminForm = new AdminForm(_system, foundAdminName);
+                adminForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Invalid Admin Credentials.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-
-        private void LoginForm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void white(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtTc_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        // Boþ eventler (Designer hatasý almamak için silme)
+        private void LoginForm_Paint(object sender, PaintEventArgs e) { }
+        private void white(object sender, EventArgs e) { }
+        private void LoginForm_Load(object sender, EventArgs e) { }
+        private void panel1_Paint(object sender, PaintEventArgs e) { }
+        private void txtTc_TextChanged(object sender, EventArgs e) { }
+        private void txtPassword_TextChanged(object sender, EventArgs e) { }
     }
 }

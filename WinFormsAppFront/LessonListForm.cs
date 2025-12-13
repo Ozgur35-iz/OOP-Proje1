@@ -31,9 +31,9 @@ namespace WinFormsAppFront
         {
             string categoryName = _category switch
             {
-                LessonCategory.Kardiyo => "Cardio Classes",
-                LessonCategory.GucKondisyon => "Strength & Conditioning Classes",
-                LessonCategory.EsneklikZihin => "Flexibility & Mind Classes",
+                LessonCategory.Cardio => "Cardio Classes",
+                LessonCategory.StrengthConditioning => "Strength & Conditioning Classes",
+                LessonCategory.FlexibilityMind => "Flexibility & Mind Classes",
                 _ => "Classes"
             };
 
@@ -44,9 +44,9 @@ namespace WinFormsAppFront
             // Arka plan resmini kategoriye göre ayarla (Resources üzerinden)
             this.BackgroundImage = _category switch
             {
-                LessonCategory.Kardiyo => Properties.Resources.Gemini_Generated_Image_e0rlf2e0rlf2e0rl,
-                LessonCategory.GucKondisyon => Properties.Resources.Gemini_Generated_Image_4bgp3z4bgp3z4bgp,
-                LessonCategory.EsneklikZihin => Properties.Resources.Gemini_Generated_Image_snkoe5snkoe5snko,
+                LessonCategory.Cardio => Properties.Resources.Gemini_Generated_Image_e0rlf2e0rlf2e0rl,
+                LessonCategory.StrengthConditioning => Properties.Resources.Gemini_Generated_Image_4bgp3z4bgp3z4bgp,
+                LessonCategory.FlexibilityMind => Properties.Resources.Gemini_Generated_Image_snkoe5snkoe5snko,
                 _ => null
             };
 

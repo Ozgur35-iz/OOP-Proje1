@@ -1,21 +1,19 @@
-﻿1;Yoga;EsneklikZihin;Ayşe Hoca;Stüdyo A;Tuesday;18:00;20
-2;Pilates;EsneklikZihin;Selin Hoca;Stüdyo B;Thursday;17:30;20
-3;Crossfit;GucKondisyon;Ali Hoca;Stüdyo C;Wednesday;19:00;15
-4;Spinning;Kardiyo;Mehmet Hoca;Spinning Salonu;Monday;07:00;25
-5;Zumba;Kardiyo;Zeynep Hoca;Ana Salon;Tuesday;19:00;30
-6;Aerobik;Kardiyo;Canan Hoca;Stüdyo A;Friday;10:00;25
-7;Step Aerobik;Kardiyo;Canan Hoca;Stüdyo A;Saturday;11:00;20
-8;Body Pump;GucKondisyon;Kemal Hoca;Ağırlık Salonu;Monday;18:00;20
-9;Fonksiyonel Antrenman;GucKondisyon;Ali Hoca;Stüdyo C;Tuesday;20:00;15
-10;TRX;GucKondisyon;Burak Hoca;Stüdyo B;Wednesday;17:00;12
-11;Kickbox;GucKondisyon;Murat Hoca;Dövüş Salonu;Thursday;19:30;18
-12;Meditasyon;EsneklikZihin;Ayşe Hoca;Stüdyo A;Sunday;09:00;25
-13;Stretching;EsneklikZihin;Selin Hoca;Stüdyo B;Monday;12:00;20
-14;Tai Chi;EsneklikZihin;Yuki Hoca;Bahçe;Saturday;08:00;15
-15;HIIT;Kardiyo;Burak Hoca;Ana Salon;Wednesday;18:30;20
-16;Dans Fitness;Kardiyo;Zeynep Hoca;Ana Salon;Friday;19:00;30
-17;Vücut Geliştirme;GucKondisyon;Kemal Hoca;Ağırlık Salonu;Tuesday;17:00;10
-18;Core Workout;GucKondisyon;Ali Hoca;Stüdyo C;Thursday;12:00;15
-19;Hatha Yoga;EsneklikZihin;Ayşe Hoca;Stüdyo A;Saturday;10:00;20
-20;Power Yoga;EsneklikZihin;Selin Hoca;Stüdyo B;Sunday;11:00;18
-
+1;Yoga;FlexibilityMind;Coach Ayse;Studio A;Tuesday;18:00;20
+2;Pilates;FlexibilityMind;Coach Selin;Studio B;Thursday;17:30;20
+3;Crossfit;StrengthConditioning;Coach Ali;Studio C;Wednesday;19:00;15
+4;Spinning;Cardio;Coach Mehmet;Spinning Room;Monday;07:00;25
+5;Zumba;Cardio;Coach Zeynep;Main Hall;Tuesday;19:00;30
+6;Aerobics;Cardio;Coach Canan;Studio A;Friday;10:00;25
+7;Step Aerobics;Cardio;Coach Canan;Studio A;Saturday;11:00;20
+8;Body Pump;StrengthConditioning;Coach Kemal;Weight Room;Monday;18:00;20
+9;Functional Training;StrengthConditioning;Coach Ali;Studio C;Tuesday;20:00;15
+11;Kickboxing;StrengthConditioning;Coach Murat;Fight Zone;Thursday;19:30;18
+12;Meditation;FlexibilityMind;Coach Ayse;Studio A;Sunday;09:00;25
+13;Stretching;FlexibilityMind;Coach Selin;Studio B;Monday;12:00;20
+14;Tai Chi;FlexibilityMind;Coach Yuki;Garden;Saturday;08:00;15
+15;HIIT;Cardio;Coach Burak;Main Hall;Wednesday;18:30;20
+16;Dance Fitness;Cardio;Coach Zeynep;Main Hall;Friday;19:00;30
+17;Bodybuilding;StrengthConditioning;Coach Kemal;Weight Room;Tuesday;17:00;10
+18;Core Workout;StrengthConditioning;Coach Ali;Studio C;Thursday;12:00;15
+19;Hatha Yoga;FlexibilityMind;Coach Ayse;Studio A;Saturday;10:00;20
+20;Power Yoga;FlexibilityMind;Coach Selin;Studio B;Sunday;11:00;18

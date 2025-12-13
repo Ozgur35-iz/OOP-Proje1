@@ -1,16 +1,12 @@
-﻿namespace WinFormsAppFront
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace WinFormsAppFront
 {
     partial class AdminForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,24 +18,91 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
+            lblWelcome = new Label();
+            btnMemberOps = new Button();
+            btnClassOps = new Button();
+            btnLogout = new Button();
             SuspendLayout();
+            // 
+            // lblWelcome
+            // 
+            lblWelcome.AutoSize = true;
+            lblWelcome.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblWelcome.ForeColor = Color.RoyalBlue;
+            lblWelcome.Location = new Point(40, 30);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new Size(276, 45);
+            lblWelcome.TabIndex = 0;
+            lblWelcome.Text = "Welcome, Admin";
+            // 
+            // btnMemberOps
+            // 
+            btnMemberOps.BackColor = Color.RoyalBlue;
+            btnMemberOps.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            btnMemberOps.ForeColor = Color.White;
+            btnMemberOps.Location = new Point(150, 150);
+            btnMemberOps.Name = "btnMemberOps";
+            btnMemberOps.Size = new Size(300, 150);
+            btnMemberOps.TabIndex = 1;
+            btnMemberOps.Text = "Member Operations";
+            btnMemberOps.UseVisualStyleBackColor = false;
+            btnMemberOps.Click += btnMemberOps_Click;
+            // 
+            // btnClassOps
+            // 
+            btnClassOps.BackColor = Color.SeaGreen;
+            btnClassOps.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
+            btnClassOps.ForeColor = Color.White;
+            btnClassOps.Location = new Point(550, 150);
+            btnClassOps.Name = "btnClassOps";
+            btnClassOps.Size = new Size(300, 150);
+            btnClassOps.TabIndex = 2;
+            btnClassOps.Text = "Class Operations";
+            btnClassOps.UseVisualStyleBackColor = false;
+            btnClassOps.Click += btnClassOps_Click;
+            // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.Transparent;
+            btnLogout.FlatAppearance.BorderSize = 0;
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnLogout.ForeColor = Color.RoyalBlue;
+            btnLogout.Location = new Point(40, 500);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(150, 40);
+            btnLogout.TabIndex = 3;
+            btnLogout.Text = "Log Out";
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
             // 
             // AdminForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1176, 608);
+            BackColor = Color.White;
+            ClientSize = new Size(1028, 750);
+            Controls.Add(btnLogout);
+            Controls.Add(btnClassOps);
+            Controls.Add(btnMemberOps);
+            Controls.Add(lblWelcome);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             Name = "AdminForm";
-            Text = "AdminForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Admin Dashboard";
+            Load += AdminForm_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label lblWelcome;
+        private Button btnMemberOps;
+        private Button btnClassOps;
+        private Button btnLogout;
     }
 }
