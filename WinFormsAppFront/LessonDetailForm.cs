@@ -160,5 +160,10 @@ namespace WinFormsAppFront
         {
             this.Close();
         }
+
+        private void panelInfo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -42,19 +42,42 @@ namespace WinFormsAppFront   // sende neyse aynen kalsýn
 
         private void btnAdminLogin_Click(object sender, EventArgs e)
         {
+            string username = txtTc.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            if (password != "admin123")
+            if (username == "" || password == "")
             {
-                MessageBox.Show("Invalid admin password.",
-                    "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Alanlar boþ býrakýlamaz!");
                 return;
             }
 
-            var adminForm = new AdminForm(_system);
-            adminForm.Show();
-            this.Hide();
+            if (!File.Exists("admins.txt"))
+            {
+                MessageBox.Show("admins.txt bulunamadý!");
+                return;
+            }
+
+            string[] admins = File.ReadAllLines("admins.txt");
+
+            foreach (string admin in admins)
+            {
+                string[] data = admin.Split(';');
+
+                if (data[0] == username && data[1] == password)
+                {
+                    string adminName = data[2];
+
+                    AdminForm adminForm = new AdminForm();
+                    adminForm.Show();
+                    this.Hide();
+                    return;
+                }
+            }
+
+            MessageBox.Show("Admin bilgileri hatalý!",
+                "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+
 
         private void LoginForm_Paint(object sender, PaintEventArgs e)
         {

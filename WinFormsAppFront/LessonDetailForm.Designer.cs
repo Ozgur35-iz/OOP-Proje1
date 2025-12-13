@@ -143,6 +143,7 @@ namespace WinFormsAppFront
             panelInfo.Name = "panelInfo";
             panelInfo.Size = new Size(571, 299);
             panelInfo.TabIndex = 1;
+            panelInfo.Paint += panelInfo_Paint;
             // 
             // LessonDetailForm
             // 
